@@ -1,0 +1,29 @@
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Dependencies & Build artifacts
+node_modules/
+dist/
+.vite/
+.vite-temp/
+
+# Agent, Editor & Tooling directories
+.agent/
+.agents/
+.claude/
+.codex/
+.cursor/
+.gemini/
+.impeccable/
+.opencode/
+
+# Local & scratch
+*.local
+.env*.local
+scratch/
