@@ -27,3 +27,6 @@ dist/
 *.local
 .env*.local
 scratch/
+
+# Local verification output
+.verification/

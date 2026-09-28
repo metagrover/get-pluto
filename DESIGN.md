@@ -1,89 +1,17 @@
----
-name: Pluto
-description: Private, open-source second brain for work on macOS
-colors:
-  primary: "#1A2340"
-  primary-dark: "#121B2F"
-  accent: "#C59B63"
-  accent-soft: "#F6EFE6"
-  accent-border: "#E5D7C3"
-  ink: "#121B2F"
-  muted: "#525E75"
-  subtle: "#64748B"
-  line: "#E8E2D8"
-  line-strong: "#D8D0C3"
-  surface: "#FFFFFF"
-  surface-subtle: "#FAF8F5"
-  surface-warm: "#F5F0E8"
-  emerald: "#047857"
-  emerald-bg: "#ECFDF5"
-  amber: "#B45309"
-  amber-bg: "#FEF3C7"
-typography:
-  display:
-    fontFamily: "Lora, Georgia, serif"
-    fontSize: "clamp(2.5rem, 5vw, 4.5rem)"
-    fontWeight: 400
-    lineHeight: 1.12
-    letterSpacing: "-0.035em"
-  headline:
-    fontFamily: "Lora, Georgia, serif"
-    fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)"
-    fontWeight: 400
-    lineHeight: 1.2
-    letterSpacing: "-0.02em"
-  body:
-    fontFamily: "Albert Sans, -apple-system, BlinkMacSystemFont, sans-serif"
-    fontSize: "1rem"
-    fontWeight: 400
-    lineHeight: 1.65
-    letterSpacing: "normal"
-  label:
-    fontFamily: "Albert Sans, -apple-system, BlinkMacSystemFont, sans-serif"
-    fontSize: "0.8125rem"
-    fontWeight: 600
-    lineHeight: 1.4
-    letterSpacing: "0.02em"
-rounded:
-  xs: "4px"
-  sm: "6px"
-  md: "12px"
-  lg: "16px"
-  xl: "20px"
-  full: "9999px"
-spacing:
-  xs: "6px"
-  sm: "12px"
-  md: "20px"
-  lg: "32px"
-  xl: "56px"
-components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.surface}"
-    rounded: "{rounded.md}"
-    padding: "13px 24px"
-  button-secondary:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.primary}"
-    rounded: "{rounded.md}"
-    padding: "13px 24px"
----
+# Pluto website design
 
-# Design System
+The site is a standalone, static marketing page for Pluto. Its job is to explain a local-first second brain for meetings in a few clear moments, without relying on screenshots or unverified claims. The real Pluto logo is the brand mark. Lora and Inter are self-hosted.
 
-<!-- impeccable:design-schema 1 -->
+## Visual world
 
-## Overview
+The direction is quiet editorial luxury: warm ivory paper, deep ink, a softened Pluto blue, hairline rules, deliberate asymmetry, and generous pauses between ideas. Type carries the personality. Rounded boxes and labels are kept to the product examples, where they clarify a conversation or source. Surfaces use restrained color rather than ornamental texture or gradients.
 
-Pluto's design language is defined by Warm & Sophisticated executive craftsmanship. Moving away from sterile, generic tech tropes, it embodies the calm authority of an executive study: deep Midnight Blue (`#1A2340`), Champagne Gold accents (`#C59B63`), a Warm Cream editorial canvas (`#FAF8F5`), and elevated Pure White cards with soft, deep shadows.
+The hero has a large second-brain statement balanced by one short explanation and clear actions. The wide blue-gray example turns one sentence from a meeting into a decision and a follow-up; it is illustrative, not a product screenshot. A four-item line names familiar meeting tools without adding explanation.
 
-## Colors
+The deep-blue conversation section contains the central interaction: Chat with Pluto on the right, connected context on the left. On roomy desktop screens a sticky scroll sequence reveals the two-turn exchange while a meeting note grows into a person profile, project profile, and commitment. Voice ID is described as a matching aid, with review and correction preserved. A direct `#ask` link, smaller screens, and reduced-motion settings show the complete example immediately.
 
-- **Midnight Blue (`#1A2340`)**: Primary brand tone. Deep, focused, intellectual. Used for primary buttons, active states, and brand anchors.
-- **Champagne Gold (`#C59B63`)**: Elegant accent. Highlights verified badges, quotation borders, and orbital nodes.
-- **Warm Cream (`#FAF8F5`)**: Background canvas. Soft on the eyes for extended reading sessions.
-- **Pure White (`#FFFFFF`)**: Elevated cards, modals, and interactive stages.
-- **Slate Ink (`#121B2F`)**: Primary typography with high contrast (≥ 12:1).
-- **Muted Slate (`#525E75`)**: Secondary narrative body copy, guaranteed ≥ 5:1 contrast on both cream and white.
-- **Warm Border (`#E8E2D8`)**: Subtle 1px structural division lines.
+Privacy follows as a calm editorial section, stating where capture and storage happen and what changes when a cloud AI provider is chosen. Native FAQ disclosures answer practical questions. The existing Pluto thought illustration gives the final action a human touch and does not carry product explanation.
+
+## Boundaries
+
+The Mac download remains an explicit coming-soon placeholder until a real release URL exists. The app repository linked from the page is currently private and must be public or replaced before launch. No pricing, customer quotes, metrics, release date, or unsupported platform promise is invented.
