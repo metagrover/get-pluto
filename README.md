@@ -20,10 +20,16 @@ Open http://127.0.0.1:4179/.
 - `assets/` — the Pluto logo, favicon, closing illustration, and self-hosted Inter and Lora fonts. Font licenses are included in `assets/fonts/`.
 - `PRODUCT.md` and `DESIGN.md` — product and visual-direction context.
 
+## GitHub Pages
+
+This site needs no build step. In the repository's **Settings → Pages**, choose **Deploy from a branch**, then select `main` and `/(root)`. GitHub Pages will publish the files at `https://<owner>.github.io/<repository>/`. The `.nojekyll` file keeps GitHub Pages from running Jekyll on this plain HTML site.
+
+The account configuring Pages needs admin or maintainer access to the repository. The published website is public even when the repository is private.
+
 ## Before publishing
 
 - Replace the explicit “Mac download coming soon” placeholder with a real release link.
-- Make `https://github.com/metagrover/pluto` public or replace the three GitHub links; the app repository is currently private, so visitors will see a 404.
+- Add a link to the Pluto app repository only after it becomes public; the current private repository would show visitors a 404.
 - Add the production domain's canonical URL and a social sharing image.
 - Choose a license for the website code before publishing a public repository. The bundled fonts retain their own licenses.
 
