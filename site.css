@@ -103,6 +103,7 @@ h1 em,h2 em{font-weight:400;color:var(--blue);font-style:italic}
 .privacy-points>div{padding:25px 35px 17px 0}
 .privacy-points>div+div{border-left:1px solid #bec5ca;padding-left:35px}
 .privacy-points strong{font:400 23px/1.4 var(--serif);letter-spacing:-.02em}
+.privacy-share strong{color:var(--blue)}
 .privacy-points p{font-size:13px;line-height:1.65;max-width:270px;color:#4f5b66;margin-top:8px}
 .privacy-points a{text-decoration:underline;text-underline-offset:5px}
 .processing-choice{display:grid;grid-template-columns:1fr 2fr;gap:35px;border-top:1px solid #bec5ca;margin-top:45px;padding-top:23px;color:#4e5b68;font-size:12px}
