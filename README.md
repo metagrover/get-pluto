@@ -14,7 +14,8 @@ Open http://127.0.0.1:4179/.
 
 ## Project files
 
-- `index.html` — page content and metadata.
+- `index.html` — homepage content and metadata.
+- `getting-started.html` — local AI setup guide, including Ollama, model downloads, Pluto settings, and troubleshooting.
 - `site.css` — responsive layout, typography, and reduced-motion styles.
 - `script.js` — scroll-driven illustrative conversation on large screens. The complete example remains visible without JavaScript, on smaller screens, and with reduced motion.
 - `assets/` — the Pluto logo, favicon, closing illustration, and self-hosted Inter and Lora fonts. Font licenses are included in `assets/fonts/`.
@@ -34,3 +35,7 @@ The account configuring Pages needs admin or maintainer access to the repository
 - Choose a license for the website code before publishing a public repository. The bundled fonts retain their own licenses.
 
 The conversation and meeting examples are fictional and labeled illustrative. No pricing, testimonials, release date, or usage metrics are claimed.
+
+The onboarding screenshot in `assets/pluto-onboarding.png` was captured from Pluto’s welcome screen using an isolated empty profile on October 4, 2026. It contains no meeting data.
+
+The macOS sharing badge was removed from the screenshot. Only its small corner region was replaced; the original app pixels outside that region are preserved.

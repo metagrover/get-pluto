@@ -35,6 +35,9 @@ The application is designed for long-running, private use on a personal computer
 - It connects meeting history into People, Projects, commitments, current reads, pre-meeting context, and Ask Pluto answers with citations.
 - Calendar access is native, local, read-only product behavior. Calendar attendees and metadata are context hints, not proof of speaker identity.
 - Meeting data is stored locally. Intelligence can use configured local or cloud model providers, and the interface must keep that boundary understandable.
+- The optional Pluto plugin connects meeting notes to ChatGPT desktop on the same Mac. Enabling access makes all meeting notes available to read; retrieved notes go to OpenAI. Raw transcripts and recordings are excluded, and the connection cannot edit meetings. Disabling stops future access but does not remove previously shared notes.
+- Voice ID uses local saved voice profiles to help recognize previously confirmed speakers. Labels remain reviewable and correctable; voice samples can be managed or deleted in People.
+- New profiles choose Standard or Encrypted database setup before onboarding. Encrypted setup uses macOS Keychain for key storage; Standard has no app-level database encryption. The choice is fixed for the profile, existing profiles keep their format, and recording files are not encrypted by default.
 - The currently supported production platform is Apple Silicon macOS. Intel macOS, Windows, and Linux are not supported.
 - Source evidence, transcripts, identity confirmations, and reversible user data must not be silently discarded, rewritten, or treated as more certain than the evidence supports.
 - Python is optional benchmark tooling; it is not the application transcription runtime.

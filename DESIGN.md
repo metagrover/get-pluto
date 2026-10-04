@@ -10,7 +10,9 @@ The hero has a large second-brain statement balanced by one short explanation an
 
 The deep-blue conversation section contains the central interaction: Chat with Pluto on the right, connected context on the left. On roomy desktop screens a sticky scroll sequence reveals the two-turn exchange while a meeting note grows into a person profile, project profile, and commitment. Voice ID is described as a matching aid, with review and correction preserved. A direct `#ask` link, smaller screens, and reduced-motion settings show the complete example immediately.
 
-Privacy follows as a calm editorial section, stating where capture and storage happen and what changes when a cloud AI provider is chosen. Native FAQ disclosures answer practical questions. The existing Pluto thought illustration gives the final action a human touch and does not carry product explanation.
+A compact paper-surface banner introduces the ChatGPT plugin with the existing ChatGPT mark, a short connection line, and a link to its FAQ. Detailed access and sharing boundaries stay in the FAQ rather than a standalone feature section.
+
+Privacy follows as a calm editorial section, stating where capture and storage happen, the Standard or Encrypted database setup choice, recording encryption limits, and what changes when a cloud AI provider is chosen. Native FAQ disclosures answer practical questions. The existing Pluto thought illustration gives the final action a human touch and does not carry product explanation.
 
 ## Boundaries
 
