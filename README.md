@@ -29,8 +29,7 @@ The account configuring Pages needs admin or maintainer access to the repository
 
 ## Before publishing
 
-- Make the Pluto app repository and release assets public before advertising the public curl command as available. Remove the launch-availability note and private-preview wording after verifying anonymous installation.
-- Verify the guide’s GitHub source and release links without authentication after the app repository becomes public.
+- Verify anonymous installer access, release downloads, and the guide’s GitHub source links as part of deployment.
 - Add the production domain's canonical URL and a social sharing image.
 - Choose a license for the website code before publishing a public repository. The bundled fonts retain their own licenses.
 
