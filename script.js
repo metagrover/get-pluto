@@ -68,3 +68,37 @@ for (const button of document.querySelectorAll('[data-copy-command]')) {
     }
   });
 }
+
+// Brief illustrative sequences play once in view; the finished diagram is the fallback.
+const memoryGraphics = document.querySelectorAll('[data-memory-motion]');
+function playMemoryGraphic(graphic) {
+  if (reducedMotion.matches) return;
+  // Restart only on an explicit replay; never queue animations.
+  graphic.classList.remove('is-playing');
+  void graphic.offsetWidth;
+  graphic.classList.add('is-playing');
+}
+if ('IntersectionObserver' in window) {
+  const memoryObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        playMemoryGraphic(entry.target);
+        memoryObserver.unobserve(entry.target);
+      }
+    }
+  }, { threshold: 0.4 });
+  for (const graphic of memoryGraphics) {
+    memoryObserver.observe(graphic);
+    const replay = graphic.querySelector('.motion-replay');
+    if (!replay) continue;
+    replay.hidden = reducedMotion.matches;
+    replay.addEventListener('click', () => playMemoryGraphic(graphic));
+  }
+}
+reducedMotion.addEventListener('change', () => {
+  for (const graphic of memoryGraphics) {
+    graphic.classList.remove('is-playing');
+    const replay = graphic.querySelector('.motion-replay');
+    if (replay) replay.hidden = reducedMotion.matches;
+  }
+});
