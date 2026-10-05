@@ -59,7 +59,6 @@ for (const button of document.querySelectorAll('[data-copy-command]')) {
       button.textContent = 'Copied';
       status.textContent = 'Paste into Terminal, then press Return.';
     } catch {
-      code.closest('pre').hidden = false;
       const selection = window.getSelection();
       const range = document.createRange();
       range.selectNodeContents(code);
