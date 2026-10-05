@@ -37,12 +37,6 @@ h1 em,h2 em{font-weight:400;color:var(--blue);font-style:italic}
 .text-link{display:inline-flex;align-items:center;gap:13px;font-size:13px;font-weight:600;text-underline-offset:5px}
 .text-link:hover{text-decoration:underline}
 .compatibility{font-size:12px!important;color:#5c6877!important;margin-top:18px!important;line-height:1.4!important}
-.install-strip{display:grid;grid-template-columns:minmax(220px,.65fr) minmax(0,1.35fr);gap:64px;align-items:center;margin-top:0;margin-bottom:80px;padding-block:32px;border-block:1px solid var(--line);scroll-margin-top:24px}
-.install-strip h2{font-size:32px;line-height:1.25}
-.install-strip-copy>p{font-size:14px;line-height:1.7;color:var(--muted);margin:12px 0 18px}
-.install-strip .install-command{margin:0}
-.install-strip-note{font-size:12px;line-height:1.6;color:var(--muted);margin-top:12px}
-@media(max-width:800px){.install-strip{grid-template-columns:1fr;gap:24px;margin-top:0;margin-bottom:60px;padding-block:28px}.install-strip-copy>p br{display:none}}
 .hero-example{position:relative;display:grid;grid-template-columns:1.1fr .9fr;column-gap:0;margin-top:110px;background:var(--mist);min-height:460px;overflow:hidden;border-radius:4px}
 .hero-example figcaption{grid-column:1/-1;padding:27px 42px 0;font:400 13px/1.4 var(--sans);color:#455a72}
 .hero-conversation{padding:61px 75px 67px 67px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
@@ -101,15 +95,16 @@ h1 em,h2 em{font-weight:400;color:var(--blue);font-style:italic}
 .is-scroll-story .context-person{opacity:var(--person-reveal,1);transform:translateY(calc((1 - var(--person-reveal,1))*12px))}
 .is-scroll-story .context-project{opacity:var(--project-reveal,1);transform:translateY(calc((1 - var(--project-reveal,1))*12px))}
 .is-scroll-story .context-commitment{opacity:var(--commitment-reveal,1);transform:translateY(calc((1 - var(--commitment-reveal,1))*12px))}
-.chatgpt-banner{display:flex;align-items:center;justify-content:space-between;gap:40px;padding-block:56px}
+.chatgpt-banner{display:grid;grid-template-columns:minmax(220px,.65fr) minmax(0,1.35fr);align-items:start;gap:64px;padding-block:56px}
 .chatgpt-brand{display:flex;align-items:center;gap:14px;flex:none;scroll-margin-top:30px}
 .chatgpt-brand img{width:32px;height:32px}
 .chatgpt-brand h2{font:400 24px/1.35 var(--serif);letter-spacing:-.02em}
 .chatgpt-banner p{font-size:14px;line-height:1.65;color:var(--muted)}
-.chatgpt-banner .text-link{flex:none}
+.chatgpt-copy blockquote{font:400 clamp(1.5rem,2.5vw,2rem)/1.45 var(--serif);letter-spacing:-.02em;color:var(--ink);margin:14px 0}
+.chatgpt-copy .text-link{margin-top:20px}
 #chatgpt-sharing{scroll-margin-top:30px}
-@media(max-width:800px){.chatgpt-banner{flex-wrap:wrap;justify-content:flex-start;gap:18px 30px}.chatgpt-banner p{flex:1;min-width:240px}}
-@media(max-width:600px){.chatgpt-banner{display:grid;gap:20px;padding-block:40px}.chatgpt-brand h2{font-size:22px}.chatgpt-banner p{min-width:0}.chatgpt-banner .text-link{justify-self:start}}
+@media(max-width:800px){.chatgpt-banner{grid-template-columns:1fr;gap:22px}}
+@media(max-width:600px){.chatgpt-banner{display:grid;gap:20px;padding-block:40px}.chatgpt-brand h2{font-size:22px}.chatgpt-banner .text-link{justify-self:start}}
 .privacy-band{padding:137px 0 128px;background:#eeeee9}
 .privacy-band-heading{display:grid;grid-template-columns:1fr .7fr;align-items:end;gap:11%;padding-bottom:66px}
 .privacy-band h2,.faq h2,.download h2{font-size:clamp(3.2rem,5vw,5.15rem);line-height:1.18}
@@ -201,3 +196,6 @@ footer>a:last-child{text-decoration:underline;text-underline-offset:5px}
 .guide-screenshot{margin:24px 0 30px}
 .guide-screenshot img{width:100%;height:auto;border-radius:4px}
 .guide-screenshot figcaption{font-size:12px;line-height:1.65;color:var(--muted);margin-top:12px}
+
+.guide-section h2 em{font:400 18px/1.4 var(--sans);color:var(--muted);letter-spacing:0;white-space:nowrap}
+.guide-prompt{margin:18px 0;padding:20px 24px;background:var(--mist);border-radius:4px;font:400 24px/1.5 var(--serif);letter-spacing:-.02em}
