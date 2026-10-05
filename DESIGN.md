@@ -16,4 +16,4 @@ Privacy follows as a calm editorial section, stating where capture and storage h
 
 ## Boundaries
 
-The Mac download remains an explicit coming-soon placeholder until a real release URL exists. The app repository linked from the page is currently private and must be public or replaced before launch. No pricing, customer quotes, metrics, release date, or unsupported platform promise is invented.
+The closing action stays compact: one copy-install button, a short compatibility note, and one setup link beside the existing illustration. The command, local AI setup, private-test instructions, and optional manual DMG installation live in the getting-started guide. The homepage notes that the public installer is available at launch; the guide explains the current private-repository requirement. No pricing, customer quotes, metrics, release date, or unsupported platform promise is invented.

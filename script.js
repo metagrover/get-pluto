@@ -46,3 +46,26 @@ window.addEventListener('hashchange', scheduleStory);
 reducedMotion.addEventListener('change', scheduleStory);
 desktopStory.addEventListener('change', scheduleStory);
 updateStory();
+
+// Commands remain selectable without JavaScript or clipboard permission.
+for (const button of document.querySelectorAll('[data-copy-command]')) {
+  const code = document.getElementById(button.dataset.copyCommand);
+  const status = button.closest('.install-command')?.querySelector('.copy-status');
+  if (!code || !status) continue;
+  button.hidden = false;
+  button.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(code.textContent.trim());
+      button.textContent = 'Copied';
+      status.textContent = 'Paste into Terminal, then press Return.';
+    } catch {
+      code.closest('pre').hidden = false;
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(code);
+      selection?.removeAllRanges();
+      selection?.addRange(range);
+      status.textContent = 'Command selected. Copy it, then paste into Terminal.';
+    }
+  });
+}

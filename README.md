@@ -17,7 +17,7 @@ Open http://127.0.0.1:4179/.
 - `index.html` — homepage content and metadata.
 - `getting-started.html` — local AI setup guide, including Ollama, model downloads, Pluto settings, and troubleshooting.
 - `site.css` — responsive layout, typography, and reduced-motion styles.
-- `script.js` — scroll-driven illustrative conversation on large screens. The complete example remains visible without JavaScript, on smaller screens, and with reduced motion.
+- `script.js` — copyable installer/model commands and a scroll-driven illustrative conversation on large screens. The complete example remains visible without JavaScript, on smaller screens, and with reduced motion.
 - `assets/` — the Pluto logo, favicon, closing illustration, and self-hosted Inter and Lora fonts. Font licenses are included in `assets/fonts/`.
 - `PRODUCT.md` and `DESIGN.md` — product and visual-direction context.
 
@@ -29,8 +29,8 @@ The account configuring Pages needs admin or maintainer access to the repository
 
 ## Before publishing
 
-- Replace the explicit “Mac download coming soon” placeholder with a real release link.
-- Add a link to the Pluto app repository only after it becomes public; the current private repository would show visitors a 404.
+- Make the Pluto app repository and release assets public before advertising the public curl command as available. Remove the launch-availability note and private-preview wording after verifying anonymous installation.
+- Verify the guide’s GitHub source and release links without authentication after the app repository becomes public.
 - Add the production domain's canonical URL and a social sharing image.
 - Choose a license for the website code before publishing a public repository. The bundled fonts retain their own licenses.
 
