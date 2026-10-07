@@ -18,6 +18,8 @@ Privacy follows as a calm editorial section, stating where capture and storage h
 
 Getting Started is the single destination for every Get Pluto action. The homepage does not repeat the installer command. The guide walks through installation, Ollama, a first recording, and the optional ChatGPT Work connection on the same Mac. It explains how to open Terminal, install the plugin from Pluto Settings, restart ChatGPT, and ask a first question. Sharing consequences are visible before connection; troubleshooting, storage details, and manual installation stay collapsed. No pricing, customer quotes, metrics, release date, or unsupported platform promise is invented.
 
+The header includes a visible Star on GitHub link beside Get Pluto, shortened to GitHub on mobile. The footer also links to the repository.
+
 ## Product imagery
 
-The in-action section shows the actual Pluto renderer with fictional browser-preview data. One large daily briefing image sits on the existing blue-gray paper surface; meeting notes, cited chat, and the theme comparison remain visible below it without disclosure controls. Images open at full size. No private profile is used. Keep the editorial hero and existing illustrations; product images provide concrete visual proof without taking over the page.
+The in-action section shows the actual Pluto renderer with fictional browser-preview data. One large daily briefing image sits on the existing blue-gray paper surface and opens at full size. The remaining screenshots live in the repository README, keeping the website focused. No private profile is used. Keep the editorial hero and existing illustrations; product images provide concrete visual proof without taking over the page.
