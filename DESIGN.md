@@ -1,6 +1,6 @@
 # Pluto website design
 
-The site is a standalone, static marketing page for Pluto. Its job is to explain a local-first second brain for meetings in a few clear moments, without relying on screenshots or unverified claims. The real Pluto logo is the brand mark. Lora and Inter are self-hosted.
+The site is a standalone, static marketing page for Pluto. Its job is to explain a local-first second brain for meetings in a few clear moments, with restrained product screenshots alongside conceptual storytelling, without unverified claims. The real Pluto logo is the brand mark. Lora and Inter are self-hosted.
 
 ## Visual world
 
@@ -17,3 +17,7 @@ Privacy follows as a calm editorial section, stating where capture and storage h
 ## Boundaries
 
 Getting Started is the single destination for every Get Pluto action. The homepage does not repeat the installer command. The guide walks through installation, Ollama, a first recording, and the optional ChatGPT Work connection on the same Mac. It explains how to open Terminal, install the plugin from Pluto Settings, restart ChatGPT, and ask a first question. Sharing consequences are visible before connection; troubleshooting, storage details, and manual installation stay collapsed. No pricing, customer quotes, metrics, release date, or unsupported platform promise is invented.
+
+## Product imagery
+
+The in-action section shows the actual Pluto renderer with fictional browser-preview data. One large daily briefing image sits on the existing blue-gray paper surface; native disclosure reveals meeting notes and cited chat. Images open at full size. No private profile is used. Keep the editorial hero and existing illustrations; product images provide concrete visual proof without taking over the page.
