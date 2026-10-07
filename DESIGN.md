@@ -20,4 +20,4 @@ Getting Started is the single destination for every Get Pluto action. The homepa
 
 ## Product imagery
 
-The in-action section shows the actual Pluto renderer with fictional browser-preview data. One large daily briefing image sits on the existing blue-gray paper surface; native disclosure reveals meeting notes and cited chat. Images open at full size. No private profile is used. Keep the editorial hero and existing illustrations; product images provide concrete visual proof without taking over the page.
+The in-action section shows the actual Pluto renderer with fictional browser-preview data. One large daily briefing image sits on the existing blue-gray paper surface; meeting notes, cited chat, and the theme comparison remain visible below it without disclosure controls. Images open at full size. No private profile is used. Keep the editorial hero and existing illustrations; product images provide concrete visual proof without taking over the page.
