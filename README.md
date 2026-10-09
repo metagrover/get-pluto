@@ -47,10 +47,19 @@ This site needs no build step. In the repository's **Settings → Pages**, choos
 
 The account configuring Pages needs admin or maintainer access to the repository. The published website is public even when the repository is private.
 
+## Search and sharing metadata
+
+Both pages declare canonical URLs under `https://metagrover.github.io/get-pluto/`,
+with page-specific Open Graph and Twitter/X large-image card metadata. They reuse
+`assets/pluto-onboarding.png` (2400 × 1600 PNG) as a public, branded preview without
+meeting data. Image URLs are absolute so sharing crawlers can resolve them.
+
+If the publishing URL changes, update each page's canonical link, `og:url`,
+`og:image`, and `twitter:image` together. No custom domain is configured.
+
 ## Before publishing
 
 - Verify anonymous installer access, release downloads, and the guide’s GitHub source links as part of deployment.
-- Add the production domain's canonical URL and a social sharing image.
 - Choose a license for the website code before publishing a public repository. The bundled fonts retain their own licenses.
 
 The conversation and meeting examples are fictional and labeled illustrative. No pricing, testimonials, release date, or usage metrics are claimed.
