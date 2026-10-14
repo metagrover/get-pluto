@@ -60,7 +60,7 @@ if (demo && demoPlay && demoStatus) {
       if (demo.error) demo.load();
       await demo.play();
     } catch {
-      demoStatus.textContent = 'The video could not play. Try again or download it below.';
+      demoStatus.textContent = 'The video could not play. Please refresh the page and try again.';
       demoStatus.hidden = false;
     } finally {
       demoPlay.disabled = false;
