@@ -47,6 +47,29 @@ reducedMotion.addEventListener('change', scheduleStory);
 desktopStory.addEventListener('change', scheduleStory);
 updateStory();
 
+// The poster and native controls work without JavaScript; playback is always opt-in.
+const demo = document.querySelector('.product-film video');
+const demoPlay = document.querySelector('.product-film-play');
+const demoStatus = document.querySelector('.product-film-status');
+if (demo && demoPlay && demoStatus) {
+  demoPlay.hidden = false;
+  demoPlay.addEventListener('click', async () => {
+    demoPlay.disabled = true;
+    demoStatus.hidden = true;
+    try {
+      if (demo.error) demo.load();
+      await demo.play();
+    } catch {
+      demoStatus.textContent = 'The video could not play. Try again or download it below.';
+      demoStatus.hidden = false;
+    } finally {
+      demoPlay.disabled = false;
+    }
+  });
+  demo.addEventListener('playing', () => { demoPlay.hidden = true; });
+  demo.addEventListener('ended', () => { demoPlay.hidden = false; });
+}
+
 // Commands remain selectable without JavaScript or clipboard permission.
 for (const button of document.querySelectorAll('[data-copy-command]')) {
   const code = document.getElementById(button.dataset.copyCommand);

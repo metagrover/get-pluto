@@ -1,13 +1,15 @@
 # Pluto website
 
-A standalone, framework-free marketing site for Pluto. It uses plain HTML, CSS, and JavaScript with self-hosted fonts and images. No build step, package install, backend, analytics, or runtime CDN is required.
+A standalone, framework-free marketing site for Pluto. It uses plain HTML, CSS, and JavaScript with self-hosted fonts, images, and video. No build step, package install, backend, analytics, or runtime CDN is required.
 
-The homepage tells Pluto’s story through four connected benefits:
+The homepage leads with **“Intelligent meeting notes for Mac.”** Its explanation
+is concrete: Pluto takes the notes, tracks who promised what, and reminds you
+to follow through. The page then explains four practical benefits:
 
 - **Voice ID:** confirm a speaker and let clear voice matches connect them to
   their name in future meetings, reducing repeated manual labeling.
-- **People and Projects:** synthesis brings linked conversations, commitments,
-  decisions, and recurring themes into dossiers you can return to.
+- **People and Projects:** related conversations, commitments, and
+  decisions stay together so you can pick up where you left off.
 - **Ask Pluto:** explore day-to-day questions and broader patterns across your
   meeting history and connected people and project context, with citations.
 - **ChatGPT plugin:** bring synthesized meeting notes into ChatGPT Work without
@@ -47,19 +49,44 @@ This site needs no build step. In the repository's **Settings → Pages**, choos
 
 The account configuring Pages needs admin or maintainer access to the repository. The published website is public even when the repository is private.
 
+## Product demo
+
+The homepage’s `#in-action` section contains the approved 45-second Pluto demo,
+replacing the previous dashboard screenshot. The hero’s “See how it works” link
+lands here. The video shows the actual app with fictional Paper Lantern meetings:
+notes, familiar voices, transcripts, projects, commitments, and Chat with Pluto.
+
+- `assets/product/pluto-demo.mp4` — 2560 × 1440 H.264/AAC video, with the approved
+  ElevenLabs narration, music, dark blue surround, and app-window margins.
+- `assets/product/pluto-demo-poster.jpg` — a frame from the approved video.
+- `assets/product/pluto-demo.en.vtt` — English captions matching the narration.
+
+The native player supports playback, seeking, captions, volume, and fullscreen.
+It uses `preload="none"` and does not autoplay: the poster loads with the page,
+and visitors choose when to load and play the video. A download link remains
+available below the player. The same approved assets live in Pluto’s
+`docs/media/`; keep the two copies synchronized when replacing the demo.
+
+To verify an update, check desktop and narrow mobile layouts, play and seek the
+video, enable English captions, and confirm the video and caption URLs resolve.
+Keep private meeting data out of all public media.
+
 ## Search and sharing metadata
 
 Both pages declare canonical URLs under `https://metagrover.github.io/get-pluto/`,
-with page-specific Open Graph and Twitter/X large-image card metadata. They reuse
-`assets/pluto-onboarding.png` (2400 × 1600 PNG) as a public, branded preview without
-meeting data. Image URLs are absolute so sharing crawlers can resolve them.
+with page-specific Open Graph and Twitter/X large-image card metadata. They use
+`assets/product/dashboard.jpg` (4320 × 2880 JPEG), showing Pluto’s actual interface
+with fictional demo data. Image URLs are absolute so sharing crawlers can resolve them.
 
-If the publishing URL changes, update each page's canonical link, `og:url`,
+If the publishing URL changes, update each page’s canonical link, `og:url`,
 `og:image`, and `twitter:image` together. No custom domain is configured.
 
 ## Before publishing
 
 - Verify anonymous installer access, release downloads, and the guide’s GitHub source links as part of deployment.
+- Verify canonical and social-preview URLs if the deployment domain changes.
+  Both pages currently use https://metagrover.github.io/get-pluto/ and the
+  fictional dashboard image in assets/product/dashboard.jpg.
 - Choose a license for the website code before publishing a public repository. The bundled fonts retain their own licenses.
 
 The conversation and meeting examples are fictional and labeled illustrative. No pricing, testimonials, release date, or usage metrics are claimed.

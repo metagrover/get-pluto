@@ -1,12 +1,12 @@
 # Pluto website design
 
-The site is a standalone, static marketing page for Pluto. Its job is to explain a local-first second brain for meetings in a few clear moments, with restrained product screenshots alongside conceptual storytelling, without unverified claims. The real Pluto logo is the brand mark. Lora and Inter are self-hosted.
+The site is a standalone, static marketing page for Pluto. Its job is to explain intelligent meeting notes for Mac in a few clear moments, with restrained product screenshots alongside conceptual storytelling, without unverified claims. The real Pluto logo is the brand mark. Lora and Inter are self-hosted.
 
 ## Visual world
 
 The direction is quiet editorial luxury: warm ivory paper, deep ink, a softened Pluto blue, hairline rules, deliberate asymmetry, and generous pauses between ideas. Type carries the personality. Rounded boxes and labels are kept to the product examples, where they clarify a conversation or source. Surfaces use restrained color rather than ornamental texture or gradients.
 
-The hero has a large second-brain statement balanced by one short explanation and clear actions. The wide blue-gray example turns one sentence from a meeting into a decision and a follow-up; it is illustrative, not a product screenshot. A four-item line introduces the connected-memory benefits: familiar voices, People and Projects, Ask Pluto, and the ChatGPT plugin. Two editorial rows pair brief captions with native HTML/SVG infographics: one familiar voice resolving to a name, then a small stack of conversations branching into a person and a project. Repeated steps, avatars, individual meeting cards, secondary labels, and the theme strip are omitted so each diagram has one clear reading. Short sequences play once when visible, with replay controls and a complete static reduced-motion fallback. They use the existing serif headings, blue emphasis, hairline rules, and stacked mobile layout.
+The hero leads with “Intelligent meeting notes for Mac.” Its short explanation says Pluto takes the notes, tracks who promised what, and reminds you to follow through, followed by the existing actions. The wide blue-gray example turns one sentence from a meeting into a decision and a follow-up; it is illustrative, not a product screenshot. A four-item line introduces the practical benefits: familiar voices, People and Projects, Ask Pluto, and the ChatGPT plugin. Two editorial rows pair brief captions with native HTML/SVG infographics: one familiar voice resolving to a name, then a small stack of conversations branching into a person and a project. Repeated steps, avatars, individual meeting cards, secondary labels, and the theme strip are omitted so each diagram has one clear reading. Short sequences play once when visible, with replay controls and a complete static reduced-motion fallback. They use the existing serif headings, blue emphasis, hairline rules, and stacked mobile layout.
 
 The deep-blue conversation section contains the central interaction: Chat with Pluto on the right, connected context on the left. On roomy desktop screens a sticky scroll sequence reveals the two-turn exchange while a meeting note grows into a person profile, project profile, and commitment. Voice ID is described as a matching aid, with review and correction preserved. A direct `#ask` link, smaller screens, and reduced-motion settings show the complete example immediately.
 
@@ -22,4 +22,31 @@ The header includes a visible Star on GitHub link beside Get Pluto, shortened to
 
 ## Product imagery
 
-The in-action section shows the actual Pluto renderer with fictional browser-preview data. One large daily briefing image sits on the existing blue-gray paper surface and opens at full size. The remaining screenshots live in the repository README, keeping the website focused. No private profile is used. Keep the editorial hero and existing illustrations; product images provide concrete visual proof without taking over the page.
+The in-action section contains one 45-second recording of the actual Pluto app
+with fictional Paper Lantern meetings. It replaces the daily briefing image,
+keeping the website focused on one piece of product proof. The approved video
+frames the app on a muted dark blue surround with top and bottom margins, a
+steady left navigation panel, and gentle zooms within the content area. Preserve
+that framing rather than adding another decorative container around the player.
+
+Keep the existing editorial heading and hero link to `#in-action`. A poster
+from the video appears before playback; native controls let visitors play,
+seek, change volume, enable English captions, and enter fullscreen. Do not
+autoplay or preload the movie. A small caption labels the footage as the actual
+interface with fictional data and provides a video download. On narrow screens,
+the caption and download link stack below the responsive 16:9 player.
+
+The Pluto README links a matching poster to the website player, with a direct
+video link and text transcript. The other product screenshots remain in its
+Explore section. No private profile is used. Keep the editorial hero and
+existing illustrations; the demo provides concrete visual proof without taking
+over the page.
+
+## Link previews
+
+Both the homepage and Getting Started page use absolute canonical and Open Graph
+URLs under https://metagrover.github.io/get-pluto/. Open Graph and Twitter
+previews use the existing fictional dashboard image at
+assets/product/dashboard.jpg, with its actual 4320 × 2880 dimensions and
+descriptive alt text. Keep page titles and descriptions specific to each page.
+The dashboard preview is separate from the approved video poster.
