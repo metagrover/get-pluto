@@ -37,7 +37,7 @@ Open http://127.0.0.1:4179/.
 ## Project files
 
 - `index.html` — homepage content and metadata.
-- `getting-started.html` — single installation and setup destination, including Ollama, a first recording, the optional ChatGPT Work plugin, and troubleshooting.
+- `getting-started.html` — single installation and setup destination, including Ollama, ChatGPT sign-in, OpenRouter, a first recording, the separate optional ChatGPT Work plugin, and troubleshooting.
 - `site.css` — responsive layout, typography, and reduced-motion styles.
 - `script.js` — copyable installer/model commands, a scroll-driven illustrative conversation on large screens, and one-time infographic sequences with replay controls. The complete example remains visible without JavaScript, on smaller screens, and with reduced motion.
 - `assets/` — the Pluto logo, favicon, closing illustration, and self-hosted Inter and Lora fonts. Font licenses are included in `assets/fonts/`.
