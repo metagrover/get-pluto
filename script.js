@@ -125,3 +125,30 @@ reducedMotion.addEventListener('change', () => {
     if (replay) replay.hidden = reducedMotion.matches;
   }
 });
+
+// Show the live GitHub star count; the button works without it.
+(() => {
+  const badges = document.querySelectorAll('[data-github-stars]');
+  if (!badges.length) return;
+  const show = (count) => {
+    if (!Number.isFinite(count) || count < 1) return;
+    const text = count >= 1000 ? `${(count / 1000).toFixed(count >= 10000 ? 0 : 1).replace(/\.0$/, '')}k` : String(count);
+    for (const badge of badges) {
+      badge.textContent = text;
+      badge.hidden = false;
+      badge.closest('a')?.setAttribute('aria-label', `Star Pluto on GitHub, ${count} stars`);
+    }
+  };
+  try {
+    const cached = JSON.parse(sessionStorage.getItem('pluto-stars') || 'null');
+    if (cached && Date.now() - cached.at < 3600000) return show(cached.count);
+  } catch {}
+  fetch('https://api.github.com/repos/metagrover/pluto', { headers: { Accept: 'application/vnd.github+json' } })
+    .then((response) => (response.ok ? response.json() : null))
+    .then((repo) => {
+      const count = repo?.stargazers_count;
+      show(count);
+      try { sessionStorage.setItem('pluto-stars', JSON.stringify({ count, at: Date.now() })); } catch {}
+    })
+    .catch(() => {});
+})();
