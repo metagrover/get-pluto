@@ -70,6 +70,24 @@ if (demo && demoPlay && demoStatus) {
   demo.addEventListener('ended', () => { demoPlay.hidden = false; });
 }
 
+// Reveal the selected task before scrolling to a setup link, including nested help links.
+if (document.body.classList.contains('guide-page')) {
+  function openGuideTarget(hash) {
+    const target = document.getElementById(hash.slice(1));
+    if (!target) return;
+    for (let panel = target.closest('details'); panel; panel = panel.parentElement.closest('details')) {
+      panel.open = true;
+    }
+    return target;
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', () => openGuideTarget(link.hash));
+  });
+  window.addEventListener('hashchange', () => openGuideTarget(location.hash));
+  openGuideTarget(location.hash)?.scrollIntoView();
+}
+
 // Commands remain selectable without JavaScript or clipboard permission.
 for (const button of document.querySelectorAll('[data-copy-command]')) {
   const code = document.getElementById(button.dataset.copyCommand);
