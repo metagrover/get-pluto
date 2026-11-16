@@ -12,8 +12,8 @@
 <meta property="og:url" content="https://metagrover.github.io/get-pluto/getting-started.html">
 <meta property="og:image" content="https://metagrover.github.io/get-pluto/assets/product/dashboard.jpg">
 <meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="4320">
-<meta property="og:image:height" content="2880">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1152">
 <meta property="og:image:alt" content="Pluto’s dashboard showing meeting notes and follow-ups with fictional demo data.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Getting started | Pluto">
@@ -21,33 +21,89 @@
 <meta name="twitter:image" content="https://metagrover.github.io/get-pluto/assets/product/dashboard.jpg">
 <meta name="twitter:image:alt" content="Pluto’s dashboard showing meeting notes and follow-ups with fictional demo data.">
 
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/fonts/fonts.css"><link rel="stylesheet" href="site.css?v=setup-8">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/fonts/fonts.css"><link rel="stylesheet" href="site.css?v=setup-10">
 </head>
 <body class="guide-page">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header wrap"><a class="brand" href="index.html" aria-label="Pluto home"><img src="assets/pluto-logo.svg" alt="" width="44" height="44">Pluto</a><nav aria-label="Main navigation"><a class="guide-mobile-link" href="index.html">Back to Pluto</a><a class="nav-cta" href="#install-pluto">Install Pluto <span class="arrow arrow-out" aria-hidden="true"></span></a></nav></header>
 <main id="main" class="wrap">
-  <div class="guide-hero"><h1>Get started<br><em>with Pluto.</em></h1><p>Install Pluto, choose how it runs AI, and try your first recording.</p><p id="before-you-begin" class="compatibility">Apple Silicon · macOS 14.2 or later · Internet needed for initial downloads</p></div>
+  <div class="guide-hero">
+    <h1>Get started <em>with Pluto.</em></h1>
+    <p id="before-you-begin" class="compatibility">Apple Silicon · macOS 14.2 or later · Internet needed for initial downloads</p>
+  </div>
   <div class="guide-layout">
-    <aside class="guide-toc" aria-label="Guide contents"><strong>In this guide</strong><nav aria-label="On this page"><a href="#install-pluto">Install Pluto</a><a href="#choose-ai">Choose your AI</a><a href="#first-recording">Your first recording</a><a href="#chatgpt">Notes in ChatGPT</a><a href="#claude">Notes in Claude Desktop</a><a href="#troubleshooting">If you get stuck</a></nav></aside>
+    <aside class="guide-toc">
+      <nav aria-label="Common setup tasks">
+        <a href="#install-pluto">Install Pluto</a>
+        <a href="#chatgpt-sign-in">Sign in with ChatGPT</a>
+        <a href="#notes-connections">Connect meeting notes</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+      </nav>
+    </aside>
     <article class="guide-article" aria-label="Pluto setup instructions">
-      <section id="install-pluto" class="guide-section"><h2>Install Pluto</h2><p>Open <strong>Terminal</strong> on your Mac: press <strong>Command (⌘) + Space</strong>, type “Terminal,” and press Return. Click <strong>Copy command</strong> below, paste it into Terminal with <strong>Command + V</strong>, then press Return. Wait for Pluto to install and open.</p><div class="install-command"><div class="command-actions"><button type="button" data-copy-command="guide-install-command" hidden>Copy command</button></div><pre><code id="guide-install-command">curl -fsSL https://raw.githubusercontent.com/metagrover/pluto/master/scripts/install-macos.sh | bash</code></pre><p class="copy-status" role="status" aria-live="polite"></p></div><p>The <a href="https://github.com/metagrover/pluto/releases">current installer</a> includes meeting notes and chat. For standalone Notes, the unified Tasks list, and Claude Desktop access, <a href="https://github.com/metagrover/pluto/blob/master/docs/dev.md">build from source</a>.</p><p id="prepare-pluto">Follow Pluto’s setup to download its speech models and allow microphone and system audio access. Calendar access is optional.</p></section>
-      <section id="choose-ai" class="guide-section"><h2>Choose how Pluto runs AI</h2>
-        <p>Pluto’s local speech models handle transcription. Choose one provider for notes and answers; complete provider setup before your first recording so Pluto can generate notes. You can change providers later in <strong>Settings → Intelligence</strong>.</p>
-        <p>Choose Ollama, ChatGPT, or OpenRouter during setup. You can change it later in <strong>Settings → Intelligence</strong>.</p>
-        <h3 id="chatgpt-sign-in">Use your ChatGPT subscription</h3>
-        <p>Use an eligible ChatGPT Plus or Pro account. Choose <strong>ChatGPT</strong> in Pluto’s setup, review the sharing explanation, then choose <strong>Sign in with ChatGPT</strong>. Finish signing in and allow plan usage in your browser, then return to Pluto to confirm. No Ollama, API key, or ChatGPT desktop app is needed for this option.</p>
-        <p>Relevant transcript text, notes, questions, and context go to OpenAI, including for automatic People and Project updates. Audio and transcription stay local. Requests use your ChatGPT subscription allowance. Pluto also has adjustable daily safeguards. Availability depends on your account and workspace. <a href="https://github.com/metagrover/pluto/blob/master/docs/chatgpt-intelligence.md">Sign-in and usage details</a>.</p>
-        <h3 id="install-ollama">Run AI on your Mac with Ollama</h3>
-        <p><a href="https://ollama.com/download/mac">Download Ollama for Mac</a>, move it into Applications, and open it. Follow its prompt to enable the <code>ollama</code> Terminal command.</p><p id="download-models">Keep Ollama open. Copy this command into Terminal and press Return to download Pluto’s default language models, then wait for both downloads to finish:</p>
+      <section class="guide-section">
+        <h2>Install and record</h2>
+        <div class="guide-step" id="install-pluto">
+          <h3>Install Pluto</h3>
+          <p>Open <strong>Terminal</strong> on your Mac. Press <strong>Command (⌘) + Space</strong>, type “Terminal,” and press Return. Copy the command below, paste it into Terminal with <strong>Command + V</strong>, and press Return.</p>
+          <div class="install-command">
+            <div class="command-actions"><button type="button" data-copy-command="guide-install-command" hidden>Copy command</button></div>
+            <pre><code id="guide-install-command">curl -fsSL https://raw.githubusercontent.com/metagrover/pluto/master/scripts/install-macos.sh | bash</code></pre>
+            <p class="copy-status" role="status" aria-live="polite"></p>
+          </div>
+          <p id="prepare-pluto">When Pluto opens, follow setup to download the speech models and allow microphone and system audio access. Calendar access is optional.</p>
+        </div>
+        <div class="guide-step" id="first-recording">
+          <h3>Try your first recording</h3>
+          <p>With <a href="#choose-ai">your AI provider set up</a>, let everyone know you’re recording and click <strong>New meeting</strong>. When you’re done, choose <strong>Finish recording</strong> and wait for processing.</p>
+          <p>Open the meeting to review its notes or ask Pluto about a decision or follow-up. For meetings in languages other than English, choose <strong>Auto-detect</strong> for final transcription in Settings.</p>
+        </div>
+      </section>
+      <section id="choose-ai" class="guide-section">
+        <h2>Choose how Pluto runs AI</h2>
+        <p>Choose one provider for meeting notes and Ask Pluto. You can change it anytime in Settings → Intelligence.</p>
+        <details class="guide-task" id="chatgpt-sign-in" name="pluto-setup-task">
+          <summary><span>Sign in with ChatGPT</span>
+            <small>Use an eligible ChatGPT Plus or Pro plan</small></summary>
+          <div class="guide-task-content">
+            <p>Pluto uses your plan for meeting notes and Ask Pluto. Recording and transcription stay on your Mac. Relevant text goes to OpenAI, including for automatic People and Project updates.</p>
+            <ol>
+              <li>In Pluto’s setup, select <strong>ChatGPT</strong>. If Pluto is already set up, open <strong>Settings → Intelligence</strong> and select <strong>ChatGPT</strong>.</li>
+              <li>Click <strong>Sign in with ChatGPT</strong>. In your browser, choose your account and allow Pluto to use your plan.</li>
+              <li>Return to Pluto. If prompted, choose <strong>Use ChatGPT</strong> to finish setup.</li>
+            </ol>
+            <figure class="guide-screenshot">
+              <a href="assets/chatgpt-sign-in.jpg"><img src="assets/chatgpt-sign-in.jpg" alt="View Pluto’s Intelligence settings with ChatGPT selected and the Sign in with ChatGPT button visible" width="1198" height="600" loading="lazy" decoding="async"></a>
+              <figcaption>Sign in from Settings → Intelligence if Pluto is already set up.</figcaption>
+            </figure>
+            <p>Requests use your plan allowance. <a href="https://github.com/metagrover/pluto/blob/master/docs/chatgpt-intelligence.md">Sign-in and usage details</a>.</p>
+          </div>
+        </details>
+        <details class="guide-task" id="install-ollama" name="pluto-setup-task">
+          <summary><span>Set up Ollama</span>
+            <small>Run AI locally on your Mac</small></summary>
+          <div class="guide-task-content">
+            <p><a href="https://ollama.com/download/mac">Download Ollama for Mac</a>, move it into Applications, and open it. Follow its prompt to enable the <code>ollama</code> Terminal command.</p><p id="download-models">Keep Ollama open. Copy this command into Terminal and press Return to download Pluto’s default language models, then wait for both downloads to finish:</p>
         <div class="install-command"><div class="command-actions"><button type="button" data-copy-command="ollama-model-command" hidden>Copy command</button></div><pre><code id="ollama-model-command">ollama pull gemma4:12b &amp;&amp; ollama pull phi4-mini:3.8b</code></pre><p class="copy-status" role="status" aria-live="polite"></p></div>
         <p>These models are only needed for Ollama. They are separate from Pluto’s speech models. Downloads can take several minutes and need additional disk space and memory.</p>
-        <h3 id="openrouter">Choose a cloud model with OpenRouter</h3>
-        <p>During setup or in <strong>Settings → Intelligence</strong>, choose <strong>OpenRouter</strong>. Enter your API key and a model ID, such as <code>openai/gpt-4o-mini</code>. Review the sharing explanation before selecting <strong>Use OpenRouter</strong>. The key is stored securely through macOS Keychain, which may ask for permission. Saving setup does not test the key or make a paid request.</p>
+          </div>
+        </details>
+        <details class="guide-task" id="openrouter" name="pluto-setup-task">
+          <summary><span>Set up OpenRouter</span>
+            <small>Use an API key and choose a cloud model</small></summary>
+          <div class="guide-task-content">
+            <p>During setup or in <strong>Settings → Intelligence</strong>, choose <strong>OpenRouter</strong>. Enter your API key and a model ID, such as <code>openai/gpt-4o-mini</code>. Review the sharing explanation before selecting <strong>Use OpenRouter</strong>. The key is stored securely through macOS Keychain, which may ask for permission. Saving setup does not test the key or make a paid request.</p>
         <p>Relevant text goes through OpenRouter to your selected model provider, including for automatic People and Project updates. Requests are billed to your OpenRouter account. Audio and transcription stay on your Mac.</p>
+          </div>
+        </details>
       </section>
-      <section id="first-recording" class="guide-section"><h2>Try your first recording</h2><p>Open Pluto with your chosen AI ready. If you chose Ollama, keep it running. Let everyone know you’re recording, then click <strong>New meeting</strong> to start a short recording. Choose <strong>Finish recording</strong> and wait for processing.</p><p>Open the meeting to review its notes. Ask Pluto about a decision or follow-up. You can also choose <strong>Auto-detect</strong> for final transcription in Settings when your meetings use languages other than English.</p></section>
-      <section id="chatgpt" class="guide-section"><h2>Read Pluto notes in ChatGPT <em>· optional</em></h2><p>Use your saved meeting notes to discuss priorities, compare conversations, or draft follow-ups in ChatGPT Work. This is a separate notes plugin, independent of ChatGPT sign-in above. You can use any of Pluto’s AI providers without installing it. Signing in to power Pluto does not give Pluto access to your ChatGPT conversations or memories.</p>
+      <section id="notes-connections" class="guide-section">
+        <h2>Connect your meeting notes</h2>
+        <p>Optional desktop connections for using saved meeting notes in another app.</p>
+        <details class="guide-task" id="chatgpt" name="pluto-setup-task">
+          <summary><span>Read Pluto notes in ChatGPT Work</span></summary>
+          <div class="guide-task-content">
+            <p>Use your saved meeting notes to discuss priorities, compare conversations, or draft follow-ups in ChatGPT Work. This is a separate notes plugin, independent of <a href="#chatgpt-sign-in">signing in to power Pluto</a>. You can use any of Pluto’s AI providers without installing it. Signing in to power Pluto does not give Pluto access to your ChatGPT conversations or memories.</p>
         <h3>Before you connect</h3><p>You need <strong>Pluto and the ChatGPT desktop app installed on the same Mac</strong>, with Pluto running. <a href="https://learn.chatgpt.com/docs/quickstart">Get the ChatGPT desktop app</a> and sign in. Use a current version that supports local plugins and ChatGPT Work on your computer.</p><p>This setup uses the desktop app to reach the notes on your Mac. Opening ChatGPT in a web browser alone won’t connect it to Pluto.</p>
         <h3>What you’re sharing</h3><p>Enabling the connection makes <strong>all your meeting notes available to read</strong>. Notes ChatGPT retrieves are sent to OpenAI and become part of that conversation. Raw transcripts and recordings are excluded, and the plugin cannot change your meetings.</p><p>Choose <strong>Disable access</strong> in Pluto’s ChatGPT connection settings to stop future reads. Notes already shared in ChatGPT remain there.</p>
         <h3>Set it up once</h3><ol>
@@ -59,26 +115,36 @@
         </ol>
         <h3>Try asking</h3><blockquote class="guide-prompt">@Pluto what should I focus on?</blockquote><p>Or ask “What follow-ups did I commit to this week?” or “What changed across my last three planning meetings?” Ask ChatGPT to use your meeting notes and name the meetings behind its answer. Record a meeting and let Pluto generate its notes first so there’s something to read.</p>
 <p>See OpenAI’s <a href="https://learn.chatgpt.com/docs/use-chatgpt">ChatGPT Work instructions</a> and <a href="https://learn.chatgpt.com/docs/plugins">plugin guide</a>. Availability can depend on your account and workspace settings.</p>
-      </section>
-      <section id="claude" class="guide-section">
-        <h2>Search Pluto notes in Claude Desktop <em>· optional</em></h2>
-        <p>Use Claude Desktop on the same Mac to search your saved meetings, compare decisions, or find follow-ups.</p>
+          </div>
+        </details>
+        <details class="guide-task" id="claude" name="pluto-setup-task">
+          <summary><span>Search Pluto notes in Claude Desktop</span></summary>
+          <div class="guide-task-content">
+            <p>Use Claude Desktop on the same Mac to search your saved meetings, compare decisions, or find follow-ups.</p>
         <p>With Pluto running, open <strong>Settings → Advanced → Claude connection</strong>. Review the disclosure and choose <strong>Connect to Claude</strong>. Fully quit and reopen Claude Desktop, then enable Pluto in <strong>+ → Connectors</strong> in a new chat.</p>
         <p>The connection can read all saved meeting notes. Notes Claude retrieves go to Anthropic and become part of the conversation. The connection excludes raw transcripts, recordings, and standalone notes. Disable access in Pluto to stop future reads. Notes already shared remain in Claude.</p>
         <p><a href="https://github.com/metagrover/pluto/blob/master/docs/claude-connection.md">See the Claude Desktop setup and troubleshooting guide</a>.</p>
+          </div>
+        </details>
       </section>
-      <section id="troubleshooting" class="guide-section"><h2>If you get stuck</h2>
-        <details><summary>ChatGPT sign-in or plan usage is paused</summary><p>Open <strong>Settings → Intelligence → ChatGPT</strong> to finish sign-in or review the usage notice. Pluto’s daily safeguard is separate from your ChatGPT plan allowance. You can change providers without losing your recordings.</p></details>
+      <section class="guide-section">
+        <h2>Troubleshooting</h2>
+        <details class="guide-task" id="troubleshooting" name="pluto-setup-task">
+          <summary><span>Get help with setup</span></summary>
+          <div class="guide-task-content">
+            <details><summary>ChatGPT sign-in or plan usage is paused</summary><p>Open <strong>Settings → Intelligence → ChatGPT</strong> to finish sign-in or review the usage notice. Pluto’s daily safeguard is separate from your ChatGPT plan allowance. You can change providers without losing your recordings.</p></details>
         <details><summary>OpenRouter requests fail</summary><p>Check your saved model ID, key and account credit in <strong>Settings → Intelligence</strong>. Saving the key does not confirm that it is valid. Keep credentials out of public issues and screenshots.</p></details>
         <details><summary>The ChatGPT notes plugin can’t find Pluto</summary><p>Keep Pluto open with meeting-note access enabled. Fully quit ChatGPT with <strong>⌘Q</strong>, reopen it, and start a new local Work chat. Mention <strong>@Pluto</strong> again. Check that the meeting you want has generated notes.</p><p>If setup failed, update the ChatGPT desktop app and check that your account or workspace allows local Work plugins. In Pluto, choose <strong>Disable access</strong>, then connect again. “Local setup complete” confirms installation; your first successful question confirms ChatGPT can read the notes.</p></details>
         <details id="connect-models"><summary>Ollama isn’t connecting or a model is missing</summary><p>Open Ollama and run <code>ollama list</code> to check both models are installed. If you previously changed providers or models, choose Ollama in <strong>Settings → Intelligence</strong>, with <code>gemma4:12b</code> for Local Analysis &amp; Deep Model and <code>phi4-mini:3.8b</code> for Fast Chat Model. If Terminal says “command not found,” finish Ollama’s command-line setup and reopen Terminal. See <a href="https://docs.ollama.com/macos">Ollama’s Mac instructions</a>.</p><p>If your Mac struggles, use a smaller model from <a href="https://ollama.com/library">Ollama’s library</a> and enter its exact name in Pluto.</p></details>
         <details><summary>There’s no audio or transcript</summary><p>Finish Pluto’s speech-model setup and check your microphone. Review permissions in <strong>System Settings → Privacy &amp; Security</strong>, then return to Pluto and choose <strong>Check again</strong>. If you previously denied microphone access and enable it in Settings, restart Pluto.</p></details>
         <details><summary>Database setup and installer details</summary><p>Choose Standard or Encrypted during Pluto’s setup. Encrypted setup encrypts the database and uses macOS Keychain; it may ask for permission. The choice is fixed for the profile. Audio files are not encrypted by default.</p><p>The installer verifies the release and removes only Pluto’s download quarantine. It does not grant recording permissions or disable protections for other apps. <a href="https://github.com/metagrover/pluto/blob/master/scripts/install-macos.sh">Read the installer</a>. Quit Pluto before upgrading; your profile and speech models are preserved. Updates may ask for permissions again.</p></details>
         <details id="manual-install"><summary>Prefer a manual download?</summary><p><a href="https://github.com/metagrover/pluto/releases">Download the Mac DMG</a> and drag Pluto into Applications. If macOS blocks it, use <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>. The release is ad-hoc signed, not notarized. See the <a href="https://github.com/metagrover/pluto/blob/master/docs/getting-started.md#install-manually">full manual instructions</a>.</p></details>
+          </div>
+        </details>
       </section>
     </article>
   </div>
 </main>
 <footer class="wrap"><a class="brand" href="index.html"><img src="assets/pluto-logo.svg" alt="" width="40" height="40">Pluto</a><p>For everything you meant to remember.</p><a href="index.html">Back to Pluto</a></footer>
-<script src="script.js?v=setup-8"></script>
+<script src="script.js?v=setup-9"></script>
 </body></html>

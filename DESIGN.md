@@ -22,31 +22,22 @@ The header includes a visible Star on GitHub link beside Get Pluto, shortened to
 
 ## Product imagery
 
-The in-action section contains one 45-second recording of the actual Pluto app
-with fictional Paper Lantern meetings. It replaces the daily briefing image,
-keeping the website focused on one piece of product proof. The approved video
-frames the app on a muted dark blue surround with top and bottom margins, a
-steady left navigation panel, and gentle zooms within the content area. Preserve
-that framing rather than adding another decorative container around the player.
+The in-action section shows a 30.5-second recording of Pluto’s current
+interface with fictional launch data. It follows a standalone note, a meeting
+follow-up added to Tasks, and an Ask Pluto answer back to the transcript.
 
-Keep the existing editorial heading and hero link to `#in-action`. A poster
-from the video appears before playback; native controls let visitors play,
-seek, change volume, enable English captions, and enter fullscreen. Do not
-autoplay or preload the movie. A small caption labels the footage as the actual
-interface with fictional data and provides a video download. On narrow screens,
-the caption and download link stack below the responsive 16:9 player.
+The hero links to `#in-action`. The 16:9 player shows a poster before playback
+and provides native controls for seeking, volume, English captions, and
+fullscreen. Visitors choose when to load and play the video.
 
-The Pluto README links a matching poster to the website player, with a direct
-video link and text transcript. The other product screenshots remain in its
-Explore section. No private profile is used. Keep the editorial hero and
-existing illustrations; the demo provides concrete visual proof without taking
-over the page.
+The product README links a matching poster to the website player and links
+directly to the MP4 in the repository.
 
 ## Link previews
 
 Both the homepage and Getting Started page use absolute canonical and Open Graph
 URLs under https://metagrover.github.io/get-pluto/. Open Graph and Twitter
 previews use the existing fictional dashboard image at
-assets/product/dashboard.jpg, with its actual 4320 × 2880 dimensions and
+assets/product/dashboard.jpg, with its actual 1920 × 1152 dimensions and
 descriptive alt text. Keep page titles and descriptions specific to each page.
 The dashboard preview is separate from the approved video poster.

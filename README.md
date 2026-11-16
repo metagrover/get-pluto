@@ -51,21 +51,20 @@ The account configuring Pages needs admin or maintainer access to the repository
 
 ## Product demo
 
-The homepage’s `#in-action` section contains the approved 45-second Pluto demo,
-replacing the previous dashboard screenshot. The hero’s “See how it works” link
-lands here. The video shows the actual app with fictional Paper Lantern meetings:
-notes, familiar voices, transcripts, projects, commitments, and Chat with Pluto.
+The homepage’s `#in-action` section contains the approved 30.5-second Pluto demo.
+The hero’s “Watch the demo” link opens this section. The demo shows the Notes
+editor, Tasks, meeting notes, and Ask Pluto with a cited transcript passage,
+using fictional launch data and a scripted answer.
 
-- `assets/product/pluto-demo.mp4` — 2560 × 1440 H.264/AAC video, with the approved
-  ElevenLabs narration, music, dark blue surround, and app-window margins.
+- `assets/product/pluto-demo.mp4` — 1920 × 1080 H.264/AAC video with the approved
+  ElevenLabs Kyle narration.
 - `assets/product/pluto-demo-poster.jpg` — a frame from the approved video.
 - `assets/product/pluto-demo.en.vtt` — English captions matching the narration.
 
 The native player supports playback, seeking, captions, volume, and fullscreen.
-It uses `preload="none"` and does not autoplay: the poster loads with the page,
-and visitors choose when to load and play the video. A download link remains
-available below the player. The same approved assets live in Pluto’s
-`docs/media/`; keep the two copies synchronized when replacing the demo.
+The poster loads with the page. Visitors choose when to load and play the video.
+The same assets live in Pluto’s `docs/media/`. Keep the copies in sync when
+replacing the demo.
 
 To verify an update, check desktop and narrow mobile layouts, play and seek the
 video, enable English captions, and confirm the video and caption URLs resolve.
@@ -75,7 +74,7 @@ Keep private meeting data out of all public media.
 
 Both pages declare canonical URLs under `https://metagrover.github.io/get-pluto/`,
 with page-specific Open Graph and Twitter/X large-image card metadata. They use
-`assets/product/dashboard.jpg` (4320 × 2880 JPEG), showing Pluto’s actual interface
+`assets/product/dashboard.jpg` (1920 × 1152 JPEG), showing Pluto’s actual interface
 with fictional demo data. Image URLs are absolute so sharing crawlers can resolve them.
 
 If the publishing URL changes, update each page’s canonical link, `og:url`,
