@@ -20,7 +20,7 @@ The product exists to transform conversations from isolated events into a connec
 
 ## Positioning
 
-Lead with “Intelligent meeting notes for Mac.” Explain the value in familiar terms: Pluto takes the notes, tracks who promised what, and reminds you to follow through. People and project pages bring related conversations together, and answers link back to the meetings behind them.
+Lead with “Private meeting notes that become your to-do list.” Introduce Pluto as a free, open-source alternative to Granola for Mac, since readers already know that product. Explain the value in familiar terms: no bot joins the call, Pluto takes the notes, and every promise from the meeting lands on the user's task list. The to-do list is about follow-through from conversations, not a general task manager. Keep this line in sync with the README hero in the app repository. People and project pages bring related conversations together, and answers link back to the meetings behind them.
 
 Use concrete tasks in public copy and onboarding. Avoid “second brain,” “connected memory,” and “dossiers” as explanations of the product; readers should not need to learn a metaphor before understanding what Pluto does. Keep local storage, optional cloud processing, and reviewable source evidence explicit where relevant.
 

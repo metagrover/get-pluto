@@ -2,9 +2,9 @@
 
 A standalone, framework-free marketing site for Pluto. It uses plain HTML, CSS, and JavaScript with self-hosted fonts, images, and video. No build step, package install, backend, analytics, or runtime CDN is required.
 
-The homepage leads with **“Intelligent meeting notes for Mac.”** Its explanation
-is concrete: Pluto takes the notes, tracks who promised what, and reminds you
-to follow through. The page then explains four practical benefits:
+The homepage leads with **“Private meeting notes that become your to-do list.”**
+Its explanation is concrete: a free, open-source alternative to Granola for Mac
+that takes the notes and puts every promise from the meeting on your task list. The page then explains four practical benefits:
 
 - **Voice ID:** confirm a speaker and let clear voice matches connect them to
   their name in future meetings, reducing repeated manual labeling.
